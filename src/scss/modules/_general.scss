@@ -1,5 +1,5 @@
 /*
-* 
+*
 * =====================
 * GENERAL
 * =====================
@@ -8,4 +8,44 @@
 
 .text-small {
     font-size: 0.9rem !important;
+}
+
+.page-content {
+    min-height: 100vh;
+}
+
+.countdown {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    @include media-breakpoint-down(md) {
+        padding: 1rem 2rem;
+    }
+
+    .holder {
+        padding: 1rem;
+        font-weight: $font-weight-bold;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #ccc;
+        font-family: $headings-font-family;
+        @include media-breakpoint-down(md) {
+            font-size: 0.85rem;
+        }
+
+
+    }
+
+    .number {
+        color: #f6c026;
+        font-weight: 400;
+        display: block;
+        min-width: 4.5rem;
+        position: relative;
+        font-size: 1.8rem !important;
+        @include media-breakpoint-down(md) {
+            min-width: 2.5rem;
+        }
+    }
 }
