@@ -43,9 +43,10 @@
         display: block;
         min-width: 4.5rem;
         position: relative;
-        font-size: 1.8rem !important;
+
         @include media-breakpoint-down(md) {
             min-width: 2.5rem;
+            font-size: 1.8rem !important;
         }
     }
 }
