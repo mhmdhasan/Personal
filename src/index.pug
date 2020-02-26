@@ -3,9 +3,16 @@ extends _pug-includes/layout
 block content
     
     include _pug-includes/sidebar.pug
-    .page-content.hp.px-5.pb-4.pt-2
+    .page-content.hp.px-4.px-lg-5.pb-4.pt-2
         include _pug-includes/navbar.pug
-        .owl-carousel.hero-carousel
+        
+        .title.d-block.d-lg-none.w-100
+            span.ribbon Hi, I'm
+            h1.h3.mb-0.text-uppercase.letter-spacing-0 Mohamed Hasan
+            p.lead.text-muted.mb-0 Fron End Web Developer
+        
+        
+        .owl-carousel.hero-carousel.d-none.d-lg-block
             header.hero-header.text-center.w-100
                 h2.mb-0.serif-font-family.text-xl I create websites
                     span.hero-header-bg Designer
@@ -25,8 +32,8 @@ block content
         
         footer.w-100
             .row.align-items-end
-                .col-lg-7
-                    .footer-heading
+                .col-lg-7.d-none.d-lg-block
+                    .title
                         span.ribbon Hi, I'm
                         h1.h3.mb-0.text-uppercase.letter-spacing-0 Mohamed Hasan
                         p.lead.text-muted.mb-0 Fron End Web Developer

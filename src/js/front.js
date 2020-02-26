@@ -20,5 +20,12 @@ $(function () {
         autoplay: true,
         loop: true,
         mouseDrag: false
-    })
+    });
+
+
+    $(window).on('load', function () {
+        if ($(window).outerWidth() < 768) {
+            $('.d-none.d-lg-block').remove();
+        }
+    });
 });

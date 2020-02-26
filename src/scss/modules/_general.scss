@@ -165,7 +165,7 @@ body {
 }
 
 
-.footer-heading {
+.title {
     position: relative;
 
     span {
@@ -174,8 +174,8 @@ body {
         background: $brand-primary;
         color: #fff;
         position: absolute;
-        top: -2rem;
-        left: -1rem;
+        top: -2.5rem;
+        left: 0;
         font-family: $headings-font-family;
         font-weight: $headings-font-weight;
         font-size: 0.85rem;
@@ -193,8 +193,8 @@ body {
 }
 
 
-.navbar-nav.mx-auto {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+// .navbar-nav.mx-auto {
+//     position: absolute;
+//     left: 50%;
+//     transform: translateX(-50%);
+// }
