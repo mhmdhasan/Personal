@@ -55,6 +55,7 @@
             font-family: $headings-font-family;
             font-weight: $headings-font-weight;
             font-size: 0.9rem;
+            transition: all 0.3s;
             @include hover-focus {
                 color: $navbar-light-hover-color;
             }

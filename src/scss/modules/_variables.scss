@@ -67,7 +67,7 @@ $colors: map-merge((
 $brand-primary: $blue;
 
 @if $templateColour == red {
-    $brand-primary:  #ff3f3f;
+    $brand-primary:  #2DE25D;
 }
 @else if $templateColour == pink {
     $brand-primary:  #ef5285;

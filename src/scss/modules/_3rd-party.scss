@@ -1,0 +1,13 @@
+.owl-carousel.hero-carousel {
+    .owl-stage-outer {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  animation-duration: 0.1s !important;
+}

@@ -7,7 +7,7 @@
 */
 
 .text-small {
-    font-size: 0.9rem !important;
+    font-size: 0.85rem !important;
 }
 
 .page-content {
@@ -38,6 +38,9 @@
     @include media-breakpoint-up(lg) {
         font-size: 4.5rem !important;
     }
+    @include media-breakpoint-up(xl) {
+        font-size: 5rem !important;
+    }
 }
 
 body {
@@ -57,7 +60,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    // background: #f5f9fe;
+    z-index: 999;
+    background: rgba(245, 249, 254, 0.61);
 
     &-toggler {
 
@@ -98,10 +102,11 @@ body {
 }
 
 
-
-
 .hero-header {
-    h1 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+    h2 {
         position: relative;
         z-index: 99;
     }
@@ -114,12 +119,19 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 14rem;
-        opacity: 0.05;
+        font-size: 12rem;
+        // text-transform: uppercase;
+        // letter-spacing: 0.1em;
+        opacity: 0.02;
         z-index: -1;
         font-family: 'Abril Fatface', serif;
         user-select: none;
         cursor: default;
+        background: #fff;
+
+        @include media-breakpoint-down(md) {
+            font-size: 8rem;
+        }
     }
 }
 
@@ -137,4 +149,52 @@ body {
         background: url(../img/pattern.svg) no-repeat;
         opacity: 0.2;
     }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        border: 10px solid #333;
+        position: absolute;
+        top: 60%;
+        right: -3rem;
+        opacity: 0.05;
+    }
+}
+
+
+.footer-heading {
+    position: relative;
+
+    span {
+        display: block;
+        padding: 0.2rem 1rem;
+        background: $brand-primary;
+        color: #fff;
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+        font-size: 0.85rem;
+
+        &::after {
+            content: '';
+            display: block;
+            border-top: 1rem solid darken($brand-primary, 10%);
+            border-left: 0.7rem solid transparent;
+            position: absolute;
+            left: 0;
+            bottom: -1rem;
+        }
+    }
+}
+
+
+.navbar-nav.mx-auto {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }

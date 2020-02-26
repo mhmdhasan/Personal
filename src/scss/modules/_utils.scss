@@ -5,13 +5,13 @@
 */
 
 /*
-   Text utils 
+   Text utils
    ------------------------
 */
 
 .text-uppercase {
     @include uppercase;
-    letter-spacing: .1em;
+    letter-spacing: .07em;
 }
 
 .text-sm {
@@ -44,7 +44,7 @@
 }
 
 /*
-    Rounded corners - lg, sm 
+    Rounded corners - lg, sm
    ------------------------
 */
 
@@ -75,7 +75,7 @@
 }
 
 /*
-    Opacity helpers - .opacity-[1-9]   
+    Opacity helpers - .opacity-[1-9]
     ------------------------
 */
 
@@ -89,7 +89,7 @@ $opacity: 1 2 3 4 5 6 7 8 9 10;
 }
 
 /*
-    Z-index helpers - .z-index-[10-50]   
+    Z-index helpers - .z-index-[10-50]
     ------------------------
 */
 

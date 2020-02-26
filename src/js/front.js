@@ -10,3 +10,15 @@
 //     + '<div class="holder"><span class="h1 number">%M</span> Min</div>'
 //     + '<div class="holder"><span class="h1 number">%S</span> Sec</div>'));
 // });
+
+
+$(function () {
+    $('.hero-carousel').owlCarousel({
+        animateOut: 'fadeOut',
+        animateIn: 'flipInX',
+        items: 1,
+        autoplay: true,
+        loop: true,
+        mouseDrag: false
+    })
+});
