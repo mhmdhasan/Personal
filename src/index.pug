@@ -2,14 +2,22 @@ extends _pug-includes/layout
 
 block content
     
-    .page-content.d-flex.align-items-center
-        .container.py-5
-            .row.text-center
-                .col-lg-10.mx-auto
-                    img.img-fluid.mb-4.p-4(src="img/illustration-1.svg", alt="illustration", width="450")
-                    .d-inline-block.mb-4
-                        #getting-started.countdown.d-flex
-                    h1.h2.text-uppercase Under construction
-                    p.lead.mb-5.text-muted We're using typefaces of Google Fonts which are free for commercial use.
+    include _pug-includes/sidebar.pug
+    .page-content.hp.px-5.pb-4.pt-2
+        include _pug-includes/navbar.pug
+        header.hero-header.text-center.w-100
+            h1.mb-0.serif-font-family.text-xl I create websites
+                span.hero-header-bg Designer
+            p.lead.text-muted lorem ipsum dolor sit amt
+            
                     
+        
+        footer.w-100
+            .row.align-items-end
+                .col-lg-7
+                    h2.h4.mb-0.text-uppercase Mohamed Hasan
+                    p.lead.text-muted Fron End Web Developer
+                .col-lg-5.text-lg-right
+                    p.h6.small.font-weight-bold.mb-0 &copy; 2020 MohamedHasan.tech
+            
                     

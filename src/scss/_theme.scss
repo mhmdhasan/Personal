@@ -1,9 +1,9 @@
-/* ========================================= 
-   
-      THEMING OF THE BOOTSTRAP COMPONENTS           
+/* =========================================
 
-   ========================================= 
-   
+      THEMING OF THE BOOTSTRAP COMPONENTS
+
+   =========================================
+
     1 - NAVBAR
     2 - BUTTONS
     3 - TYPE
@@ -14,7 +14,7 @@
     8 - NAV
     9 - CARD
     10 - DROPDOWNS
-   
+
 */
 
 /*
@@ -52,6 +52,9 @@
     .navbar-nav {
         .nav-link {
             color: $navbar-light-color;
+            font-family: $headings-font-family;
+            font-weight: $headings-font-weight;
+            font-size: 0.9rem;
             @include hover-focus {
                 color: $navbar-light-hover-color;
             }
@@ -190,7 +193,7 @@ $value in $theme-colors {
 }
 
 /*
- * 3. TYPE  
+ * 3. TYPE
  */
 
 body {
@@ -364,7 +367,7 @@ mark,
     color: $pagination-color;
     background-color: $pagination-bg;
     border: $pagination-border-width solid $pagination-border-color;
-    
+
     &:hover {
         z-index: 2;
         color: $pagination-hover-color;
@@ -372,7 +375,7 @@ mark,
         background-color: $pagination-hover-bg;
         border-color: $pagination-hover-border-color;
       }
-    
+
       &:focus {
         z-index: 2;
         outline: $pagination-focus-outline;
@@ -767,4 +770,3 @@ code {
         }
     }
 }
-
