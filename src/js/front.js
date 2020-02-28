@@ -1,7 +1,7 @@
 $(function () {
     $('.hero-carousel').owlCarousel({
         animateOut: 'fadeOut',
-        animateIn: 'flipInX',
+        animateIn: 'fadeIn',
         items: 1,
         autoplay: true,
         loop: true,
@@ -14,6 +14,15 @@ $(function () {
             $('.d-none.d-lg-block').remove();
         }
     });
+
+
+    /* ===============================================================
+        PAGE TRANSITION EFFECT
+     =============================================================== */
+   $('.m-pagetransition').mPageTransition({
+       fadeOutTime: 600,
+       fadeInTime: 600
+   });
 
 });
 

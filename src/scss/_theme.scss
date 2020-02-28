@@ -51,7 +51,7 @@
     }
     .navbar-nav {
         .nav-link {
-            color: $navbar-light-color;
+            color: $dark;
             font-family: $headings-font-family;
             font-weight: $headings-font-weight;
             font-size: 0.9rem;
@@ -68,6 +68,17 @@
         .nav-link.show,
         .nav-link.active {
             color: $navbar-light-active-color;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 80%;
+                height: 4px;
+                background: rgba($brand-primary, 0.5);
+                position: absolute;
+                bottom: 1rem;
+                left: 0.5rem;
+            }
         }
     }
     .navbar-toggler {

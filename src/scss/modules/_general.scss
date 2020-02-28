@@ -48,6 +48,14 @@
     }
 }
 
+.bg-gradient {
+    background: linear-gradient(to right, #1db689, #73BB57) !important;
+}
+
+%bg-gradient {
+    background: linear-gradient(to right, #1db689, #73BB57) !important;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -181,6 +189,7 @@ body {
         display: block;
         padding: 0.2rem 1rem;
         background: $brand-primary;
+        @extend %bg-gradient;
         color: #fff;
         position: absolute;
         top: -2.5rem;
@@ -192,7 +201,7 @@ body {
         &::after {
             content: '';
             display: block;
-            border-top: 1rem solid darken($brand-primary, 10%);
+            border-top: 1rem solid darken(#1db689, 10%);
             border-left: 0.7rem solid transparent;
             position: absolute;
             left: 0;
