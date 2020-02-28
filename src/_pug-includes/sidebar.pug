@@ -1,9 +1,9 @@
-.sidebar.px-3.py-4
-    .sidebar-inner.flex-column.d-flex.align-items-center.justify-content-between.h-100.py-2.py-lg-0
-        a.navbar-brand.m-0.d-none.d-lg-block(href='./')
+.sidebar
+    .sidebar-inner.flex-column.d-flex.align-items-center.justify-content-between.h-100.py-4.py-lg-0.px-3
+        a.navbar-brand.m-0.d-none.d-lg-block.pt-4(href='./')
             img(src="img/logo.svg", alt="Mohamed Hasan", width="35")
         
-        a.sidebar-toggler.d-block.d-lg-none(href="#")
+        a.sidebar-toggler.d-block.d-lg-none.pt-2(href="#")
             span
             span
             span
@@ -26,3 +26,19 @@
             li
                 a.reset-anchor(href="#", target="_blank")
                     i.fab.fa-codepen.fa-fw.small
+    
+    .sidebar-menu-holder
+        ul.sidebar-menu
+            li.sidebar-item.py-2
+                a.sidebar-link.transition-link.active(href="./") Home
+            li.sidebar-item.py-2
+                a.sidebar-link.transition-link(href="about.html") About
+            li.sidebar-item.py-2
+                a.sidebar-link.transition-link(href="portfolio.html") Portfolio
+            li.sidebar-item.py-2
+                a.sidebar-link.transition-link(href="contact.html") Contact
+            li.sidebar-item.py-2
+                a.btn.btn-gradient.transition-link.rounded-pill(href="#")
+                    i.fas.fa-magic.mr-2
+                    | Hire Me
+        

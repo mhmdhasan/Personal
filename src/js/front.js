@@ -24,6 +24,15 @@ $(function () {
        fadeInTime: 600
    });
 
+
+   /* ===============================================================
+         HUMBERGUR MENU ACTIVATE
+      =============================================================== */
+    $('.sidebar-toggler').on('click', function () {
+        $(this).toggleClass('active');
+        $('.sidebar-menu-holder').toggleClass('active');
+    });
+
 });
 
 
