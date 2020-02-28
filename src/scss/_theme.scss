@@ -169,6 +169,11 @@
     &:hover, &:focus {
         color: #fff;
         opacity: 0.9;
+        text-decoration: none;
+    }
+
+    &:active {
+        background: linear-gradient(to right, #1db689, #73BB57) !important;
     }
 }
 
