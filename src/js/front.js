@@ -30,7 +30,19 @@ $(function () {
       =============================================================== */
     $('.sidebar-toggler').on('click', function () {
         $(this).toggleClass('active');
-        $('.sidebar-menu-holder').toggleClass('active');
+
+
+        if ($('.sidebar-toggler').hasClass('active')) {
+            $('.sidebar-menu-holder').show();
+            setTimeout(function () {
+                $('.sidebar-menu-holder').addClass('active');
+            }, 50);
+        } else {
+            $('.sidebar-menu-holder').removeClass('active');
+            setTimeout(function () {
+                $('.sidebar-menu-holder').hide();
+            }, 600);
+        }
     });
 
 });
