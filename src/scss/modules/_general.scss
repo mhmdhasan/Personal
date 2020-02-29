@@ -167,6 +167,11 @@ hr {
             @include media-breakpoint-up(sm) {
                 display: none !important;
             }
+
+            &.active {
+                position: fixed;
+                right: 1.5rem;
+            }
         }
 
         span {
