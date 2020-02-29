@@ -67,7 +67,7 @@ $colors: map-merge((
 $brand-primary: $blue;
 
 @if $templateColour == red {
-    $brand-primary:  #2DE25D;
+    $brand-primary:  #1db689;
 }
 @else if $templateColour == pink {
     $brand-primary:  #ef5285;
@@ -91,7 +91,7 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         #f9fbff !default;
 $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
