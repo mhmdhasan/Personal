@@ -1,4 +1,10 @@
 $(function () {
+
+
+    $('a[href="#"]').on('click', function (e) {
+        e.preventDefault();
+    });
+
     $('.hero-carousel').owlCarousel({
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
@@ -28,7 +34,7 @@ $(function () {
    /* ===============================================================
          HUMBERGUR MENU ACTIVATE
       =============================================================== */
-    $('.sidebar-toggler').on('click', function () {
+    $('.sidebar-toggler').on('click dblclick', function () {
         $(this).toggleClass('active');
 
 
@@ -39,9 +45,7 @@ $(function () {
             }, 50);
         } else {
             $('.sidebar-menu-holder').removeClass('active');
-            setTimeout(function () {
-                $('.sidebar-menu-holder').hide();
-            }, 600);
+            $('.sidebar-menu-holder').hide();
         }
     });
 
