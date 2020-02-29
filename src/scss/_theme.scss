@@ -72,11 +72,12 @@
             &::before {
                 content: '';
                 display: block;
-                width: 80%;
-                height: 4px;
-                background: rgba($brand-primary, 0.5);
+                width: 70%;
+                height: 3px;
+                @extend %bg-gradient;
+                @extend %shadow;
                 position: absolute;
-                bottom: 1rem;
+                bottom: 0.5rem;
                 left: 0.5rem;
             }
         }
