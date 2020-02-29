@@ -6,6 +6,29 @@
 *
 */
 
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #1db689, #73BB57) !important;
+    border-radius: 30rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::selection {
+  background: $brand-primary; /* WebKit/Blink Browsers */
+  color: #fff
+}
+::-moz-selection {
+  background: $brand-primary; /* Gecko Browsers */
+  color: #fff
+}
+
 .text-small {
     font-size: 0.85rem !important;
 }
