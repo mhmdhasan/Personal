@@ -151,6 +151,23 @@ hr {
     font-size:  ($font-size-base * 1.4) !important;
 }
 
+.error-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-heading {
+    font-size: 10rem;
+    font-family: 'Abril Fatface', serif;
+    font-weight: 400;
+
+    @include media-breakpoint-down(md) {
+        font-size: 6rem;
+    }
+}
+
 
 /*
 *

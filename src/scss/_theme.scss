@@ -170,8 +170,9 @@
 
     &:hover, &:focus {
         color: #fff;
-        opacity: 0.9;
+        // opacity: 0.9;
         text-decoration: none;
+        border: none !important;
     }
 
     &:active {

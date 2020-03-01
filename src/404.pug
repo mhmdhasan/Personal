@@ -1,0 +1,22 @@
+extends _pug-includes/layout
+
+block vars 
+    - var current = '404'
+
+block content
+    .m-pagetransition
+        include _pug-includes/sidebar.pug
+        .page-content.hp.px-4.px-lg-5.pb-4.pt-2.overflow-hidden.d-block
+            //- include _pug-includes/navbar.pug
+            
+            .map
+            
+            header.hero-header.error-msg.text-center.w-100.p-4
+                .row
+                    .col-lg-6.mx-auto
+                        h1.error-heading 404
+                            span.hero-header-bg Not found
+                        h5.base-font-family.line-height-md.mb-4.text-muted Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+                        a.btn.btn-gradient.transition-link(href="./") Return home
+                
+        
