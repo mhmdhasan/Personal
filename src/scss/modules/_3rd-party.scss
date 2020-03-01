@@ -5,6 +5,69 @@
     }
 }
 
+.owl-carousel {
+    .owl-dots {
+        padding-top: 1.5rem;
+        .owl-dot {
+            span {
+                background: $brand-primary;
+                border: 3px solid transparent;
+                transition: all 0.3s;
+                margin: 4px;
+                width: 12px;
+                height: 12px;
+            }
+            &.active {
+                span {
+                    background: none;
+                    border-color: $brand-primary;
+                }
+            }
+            &:hover, &:focus {
+                span {
+                    background: $brand-primary;
+                }
+                &.active {
+                    span {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .owl-nav {
+        width: 100%;
+        position: absolute;
+        height: 0;
+        top: 50%;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .owl-prev, .owl-next {
+            background: rgba($brand-primary, 0.1);
+            font-size: 1.5rem;
+            padding: 0 1rem;
+
+            &:hover, &:focus {
+                background: rgba($brand-primary, 0.1);
+            }
+        }
+
+        .owl-prev {
+            transform: translateX(-150%);
+        }
+        .owl-next {
+            transform: translateX(150%);
+        }
+    }
+}
+
 
 .fadeOut {
   -webkit-animation-name: fadeOut;

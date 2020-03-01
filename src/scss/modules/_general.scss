@@ -498,38 +498,72 @@ hr {
 }
 
 
+// .shot {
+//     padding: 3rem 3rem 0 0;
+//     background: rgba($brand-primary, 0.1);
+//     position: relative;
+//
+//     &::before {
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         top: 0;
+//         left: -5rem;
+//         background: rgba($brand-primary, 0.1);
+//         width: 5rem;
+//         height: 100%;
+//     }
+//
+//     &-right {
+//         padding: 3rem 0 0 3rem;
+//         &::before {
+//             left: auto;
+//             right: -5rem;
+//         }
+//     }
+//
+//     &-holder {
+//         overflow: hidden;
+//         padding: 10px 10px 0 10px;
+//         img {
+//             border-radius: 0.5rem 0.5rem 0 0;
+//             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+//         }
+//     }
+// }
+
+
 .shot {
-    padding: 3rem 3rem 0 0;
-    background: rgba($brand-primary, 0.1);
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 5px solid #0c0b0d;
     position: relative;
 
     &::before {
         content: '';
         display: block;
+        width: 6rem;
+        height: 1.5rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+        background: #0c0b0d;
         position: absolute;
-        top: 0;
-        left: -5rem;
-        background: rgba($brand-primary, 0.1);
-        width: 5rem;
-        height: 100%;
+        top: -2px;
+        left: calc(50% - 3rem);
     }
 
-    &-right {
-        padding: 3rem 0 0 3rem;
-        &::before {
-            left: auto;
-            right: -5rem;
-        }
+    &::after {
+        content: '';
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: #aaa;
+        position: absolute;
+        top: 0.6rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    &-holder {
-        overflow: hidden;
-        padding: 10px 10px 0 10px;
-        img {
-            border-radius: 0.5rem 0.5rem 0 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-        }
-    }
 }
 
 .index-forward {

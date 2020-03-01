@@ -16,7 +16,14 @@ $(function () {
     $('.portfolio-carousel').owlCarousel({
         items: 1,
         autoplay: true,
-        loop: true,
+        nav: false,
+        margin: 10,
+        navText: ['<i class="text-gradient fas fa-long-arrow-alt-left"></i>', '<i class="text-gradient fas fa-long-arrow-alt-right"></i>'],
+        responsive: {
+            991: {
+                nav: true
+            }
+        }
     });
 
 
