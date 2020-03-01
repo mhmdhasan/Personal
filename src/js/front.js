@@ -52,6 +52,7 @@ $(function () {
 
 
         if ($('.sidebar-toggler').hasClass('active')) {
+            $('body').css('overflow', 'hidden');
             $('.sidebar-menu-holder').show();
             setTimeout(function () {
                 $('.sidebar-menu-holder').addClass('active');
@@ -59,6 +60,7 @@ $(function () {
         } else {
             $('.sidebar-menu-holder').removeClass('active');
             $('.sidebar-menu-holder').hide();
+            $('body').css('overflow', 'auto');
         }
     });
 

@@ -1,15 +1,15 @@
 
-/* 
-========================================= 
-========================================= 
+/*
+=========================================
+=========================================
 
    Bootstrapious Boilerplate Template
 
-========================================= 
+=========================================
 ========================================= */
 
 
-// functions.scss - Bootstrap functions 
+// functions.scss - Bootstrap functions
 @import "modules/functions";
 // variables-custom.scss - to change colour variant, rounded corners, etc.
 @import "modules/variables";
@@ -18,20 +18,18 @@
 // custom mixins
 @import "modules/mixins-custom";
 // general styling
-@import "modules/general"; 
+@import "modules/general";
 // orion icons
 @import "modules/icons";
 // custom util classes
-@import "modules/utils"; 
+@import "modules/utils";
+// navigation styles
+@import "modules/navbar"; 
 
 // 3rd party scripts override
-@import "modules/3rd-party"; 
+@import "modules/3rd-party";
 // demo styling
 @import "modules/demo";
 
 // bootstrap base stylesheet overrides
-@import "theme"; 
-
-
-
-
+@import "theme";
