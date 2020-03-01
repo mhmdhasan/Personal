@@ -1,5 +1,14 @@
-mixin svgIcon(icon, iconClass)
-    if (!iconClass)
-        - iconClass = ''
-    svg.svg-icon(class=iconClass)
-        use(xlink:href='#' + icon)  
+mixin sidebarLink(link, name)
+    // Link
+    a.sidebar-link.transition-link(
+        href=link
+        class={active: name === current}
+    ) #{name}
+    
+mixin navLink(link, name)
+    // Link
+    a.nav-link.transition-link(
+        href=link
+        class={active: name === current}
+    ) #{name}
+    

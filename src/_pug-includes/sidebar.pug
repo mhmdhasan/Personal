@@ -8,7 +8,9 @@
             span
             span
                 
-        a.h6.text-small.reset-anchor.text-small.font-weight-bold.sidebar-rounded-link(href="#") Download Resume
+        a.h6.text-small.reset-anchor.text-small.font-weight-bold.sidebar-rounded-link(href="#") 
+            i.far.fa-clipboard.mr-2 
+            | Download Resume
         
         ul.list-unstyled.mb-5.mb-lg-4
             li.mb-0
@@ -30,13 +32,13 @@
     .sidebar-menu-holder
         ul.sidebar-menu
             li.sidebar-item.py-2
-                a.sidebar-link.transition-link.active(href="./") Home
+                +sidebarLink('./', 'Home')
             li.sidebar-item.py-2
-                a.sidebar-link.transition-link(href="about") About
+                +sidebarLink('about.html', 'About')
             li.sidebar-item.py-2
-                a.sidebar-link.transition-link(href="portfolio") Portfolio
+                +sidebarLink('portfolio.html', 'Portfolio')
             li.sidebar-item.py-2
-                a.sidebar-link.transition-link(href="contact") Contact
+                +sidebarLink('contact.html', 'Contact')
             li.sidebar-item.py-2
                 a.btn.btn-gradient.transition-link(href="#")
                     i.fas.fa-magic.mr-2
