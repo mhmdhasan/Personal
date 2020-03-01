@@ -53,10 +53,12 @@
             background: rgba($brand-primary, 0.1);
             font-size: 1.5rem;
             padding: 0 1rem;
+            transition: all 0.3s;
 
             &:hover, &:focus {
                 background: rgba($brand-primary, 0.1);
             }
+
         }
 
         .owl-prev {

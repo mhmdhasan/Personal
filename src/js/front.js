@@ -11,6 +11,7 @@ $(function () {
         items: 1,
         autoplay: true,
         loop: true,
+        dots: false,
         mouseDrag: false
     });
     $('.portfolio-carousel').owlCarousel({
