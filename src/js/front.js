@@ -13,6 +13,11 @@ $(function () {
         loop: true,
         mouseDrag: false
     });
+    $('.portfolio-carousel').owlCarousel({
+        items: 1,
+        autoplay: true,
+        loop: true,
+    });
 
 
     $(window).on('load', function () {
