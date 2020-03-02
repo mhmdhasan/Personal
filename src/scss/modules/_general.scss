@@ -405,16 +405,8 @@ hr {
 .form-holder {
     box-shadow: 0 0.2rem 0.7rem rgba(0,0,0,0.1);
     position: relative;
+    border-top: 3px solid $brand-primary;
 
-    &::before {
-        content: '';
-        width: 100%;
-        height: 3px;
-        background: $brand-primary;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
 
     &-icon {
         width: 3rem;
@@ -457,7 +449,7 @@ hr {
     @extend %shadow;
 
     &:hover, &:focus {
-        background: $brand-primary;
+        background: darken($brand-primary, 5%);
         color: #fff;
     }
 }
