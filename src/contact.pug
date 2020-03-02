@@ -21,7 +21,7 @@ block content
                             .form-holder.p-4.p-lg-5.mb-5.shadow-sm.bg-white.rounded
                                 .form-holder-icon.bg-primary
                                     i.fas.fa-quote-right
-                                form.contact-form(data-netlify="true", method="POST", action="/thanks", name="contactform", data-netlify-recaptcha="true")
+                                form.contact-form(data-netlify="true", method="POST", action="/thanks", name="contactform")
                                     .row
                                         .form-group.col-lg-6
                                             label.required First Name
@@ -35,8 +35,6 @@ block content
                                         .form-group.col-lg-12
                                             label.required Your message
                                             textarea.form-control.form-control-lg.py-3(name='message', rows="4", placeholder="Enter your message")
-                                        .form-group.col-lg-12
-                                            div(data-netlify-recaptcha="true")
                                         .form-group.col-lg-12.mb-0
                                             button.btn.btn-primary.py-2.btn-block(type="submit") Send your message
                                             
