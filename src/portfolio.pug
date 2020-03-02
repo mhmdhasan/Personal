@@ -13,12 +13,6 @@ block content
                 .container-fluid
                     .row.pb-4.text-center
                         .col-lg-8.mx-auto
-                            //- h1.serif-font-family.lined.lined-center.mb-4 The work process
-                            //- p.h5.base-font-family.line-height-md.mb-4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
-                            //- 
-                            //- p.lead.text-muted.mb-4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                            //- 
-                            
                             .pt-5
                                 h2.serif-font-family.lined.lined-center.mb-4 Recent HTML5 templates
                                 p.lead.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
@@ -27,7 +21,7 @@ block content
                                     - var htmlItems = [] 
                                     
                                     //- Item
-                                    - htmlItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'temp-shot-1.png', 'url': '#'})
+                                    - htmlItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'temp-shot-1.png', 'url': '#', 'themeforest': true})
                                     //- Item
                                     - htmlItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'temp-shot-1.png', 'url': '#'})
                                     //- Item
@@ -46,7 +40,10 @@ block content
                                             .col-lg-6.text-center.text-lg-right.index-forward.order-2.order-lg-1
                                                 h2.h4 #{val.title}
                                                 p.text-muted #{val.description}
-                                                a.btn.btn-gradient(href=val.url, target="_blank") Live preview
+                                                if (val.themeforest == true)
+                                                    a.btn.btn-outline-primary.m-1(href=val.url, target="_blank") Buy on Themeforest
+                                                a.btn.btn-gradient.m-1(href=val.url, target="_blank") Live preview
+                                                
                                                 
                                             .col-lg-6.order-1.order-lg-2
                                                 .shot.mb-4.mb-lg-0
