@@ -81,13 +81,15 @@
     }
 }
 
+// 73BB57
+
 .bg-gradient {
-    background: linear-gradient(to right, #1db689, #73BB57) !important;
+    background: linear-gradient(to right, #1db689, #1db689) !important;
     border: none !important;
 }
 
 %bg-gradient {
-    background: linear-gradient(to right, #1db689, #73BB57) !important;
+    background: linear-gradient(to right, #1db689, #1db689) !important;
 }
 %shadow {
     box-shadow: 0 2px 3px rgba(29, 182, 137, 0.2) !important;
@@ -95,7 +97,7 @@
 .text-gradient {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: linear-gradient(to right, #1db689, #73BB57) !important;
+    background-image: linear-gradient(to right, #1db689, #1db689) !important;
     color: #fff;
 }
 
@@ -171,6 +173,24 @@ hr {
 .face {
     font-size: 5rem;
     text-shadow: 0 4px 2px rgba(29, 182, 137, 0.2) !important;
+}
+
+.quote {
+    position: relative;
+
+    &::before {
+        content: '\f10e';
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        transform: translateY(-50%);
+        display: block;
+        font-size: 3rem;
+        text-shadow: 0 4px 2px rgba(29, 182, 137, 0.2) !important;
+        color: $brand-primary;
+        font-family: 'Font Awesome\ 5 Free';
+        font-weight: 900;
+    }
 }
 
 
