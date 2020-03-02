@@ -1,0 +1,67 @@
+extends _pug-includes/layout
+
+block vars 
+    - var current = 'Contact'
+
+block content
+    .m-pagetransition
+        include _pug-includes/sidebar.pug
+        .page-content.hp.px-4.px-lg-5.pb-4.pt-2.overflow-hidden.d-block
+            include _pug-includes/navbar.pug
+            
+            section.py-5
+                .container-fluid
+                    .row
+                        .col-lg-7
+                            .pt-5
+                                h1.serif-font-family.lined.mb-4 Drop me a line
+                                p.lead.text-muted.mb-5 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                
+                    .row.pb-4
+                        .col-lg-7
+                            .form-holder.p-4.p-lg-5.mb-5.shadow-sm.bg-white
+                                //- .form-holder-icon
+                                //-     i.fas.fa-quote-right
+                                form.contact-form
+                                    .row
+                                        .form-group.col-lg-6
+                                            label.required First Name
+                                            input.form-control.form-control-lg(type='text', name='firstname', placeholder="Enter your first name")
+                                        .form-group.col-lg-6
+                                            label.required Last Name
+                                            input.form-control.form-control-lg(type='text', name='lastname', placeholder="Enter your last name")
+                                        .form-group.col-lg-12
+                                            label.required Email Address
+                                            input.form-control.form-control-lg(type='email', name='email', placeholder="Enter your email address")
+                                        .form-group.col-lg-12
+                                            label.required Your message
+                                            textarea.form-control.form-control-lg.py-3(name='message', rows="4", placeholder="Enter your message")
+                                        .form-group.col-lg-12.mb-0
+                                            button.btn.btn-primary.py-2.btn-block(type="submit") Send your message
+                                            
+                        
+                        .col-lg-4
+                            .bg-light.p-4.p-lg-5
+                                h3.serif-font-family.lined.mb-3 I'm social
+                                p.lead.text-muted.mb-4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                ul.list-inline.mb-5.pb-3
+                                    li.mb-0.list-inline-item
+                                        a.reset-anchor.social-link(href="#", target="_blank")
+                                            i.fab.fa-facebook-f.fa-fw.small
+                                    li.mb-0.list-inline-item
+                                        a.reset-anchor.social-link(href="#", target="_blank")
+                                            i.fab.fa-twitter.fa-fw.small
+                                    li.mb-0.list-inline-item
+                                        a.reset-anchor.social-link(href="#", target="_blank")
+                                            i.fab.fa-behance.fa-fw.small
+                                    li.mb-0.list-inline-item
+                                        a.reset-anchor.social-link(href="#", target="_blank")
+                                            i.fab.fa-linkedin.fa-fw.small
+                                    li.list-inline-item
+                                        a.reset-anchor.social-link(href="#", target="_blank")
+                                            i.fab.fa-codepen.fa-fw.small
+                                
+                                
+                                h3.serif-font-family.lined.mb-3 Upwork Client?
+                                p.lead.text-muted.mb-4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                a.btn.btn-primary(href="#", target="_blank") My Upwork profile
