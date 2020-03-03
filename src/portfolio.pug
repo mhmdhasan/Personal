@@ -11,7 +11,8 @@ block content
             
             section.pb-5.pt-lg-5
                 .container-fluid
-                    .row.pb-4.pt-4.text-center
+                    // HTML TEMPLATES
+                    .row.pb-4.pt-4.text-center.mb-5.pb-5
                         .col-lg-8.mx-auto
                             h2.serif-font-family.lined.lined-center.mb-4 Recent HTML5 templates
                             p.lead.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
@@ -48,3 +49,37 @@ block content
                                             .shot.mb-4.mb-lg-0
                                                 img.img-fluid(src="img/" + val.image, alt="...")
                                     
+                                    
+                    // PSD TEMPLATES                
+                    .row.pb-4.pt-4.text-center.mb-5.pb-5
+                        .col-lg-8.mx-auto
+                            h2.serif-font-family.lined.lined-center.mb-4 Recent design shots
+                            p.lead.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                
+                            .owl-carousel.owl-theme.portfolio-carousel
+                                - var designItems = [] 
+                                
+                                //- Item
+                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'temp-shot-1.png', 'url': '#'})
+                                //- Item
+                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'temp-shot-1.png', 'url': '#'})
+                                //- Item
+                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'temp-shot-1.png', 'url': '#'})
+                                //- Item
+                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'temp-shot-1.png', 'url': '#'})
+                                //- Item
+                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'temp-shot-1.png', 'url': '#'})
+
+                                //- Item
+                                //- - designItems.push({'title': '', 'description': '', 'image': '', 'url': ''})
+                                
+                                each val in designItems
+                                    .row.text-left.pt-5.align-items-center.mb-2
+                                        .col-lg-6
+                                            .shot.mb-4.mb-lg-0
+                                                img.img-fluid(src="img/" + val.image, alt="...")
+                                                    
+                                        .col-lg-6.text-center.text-lg-left.index-forward
+                                            h2.h4 #{val.title}
+                                            p.text-muted #{val.description}
+                                            a.btn.btn-primary.m-1(href=val.url, target="_blank") Live preview

@@ -159,6 +159,11 @@
             @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
         }
     }
+
+    &:hover, &:focus {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 .btn-gradient {
@@ -473,10 +478,12 @@ $value in $theme-colors {
     padding: $input-padding-y $input-padding-x;
     font-size: $font-size-base;
     line-height: $input-line-height;
-    color: $input-color;
+    color: #000;
     background-color: $input-bg;
     border: $input-border-width solid #eee;
     box-shadow: inset 0 0 0 0.5px #eee;
+    font-family: $headings-font-family;
+    font-weight: 500;
 
     @if $enable-rounded {
         border-radius: $input-border-radius;
@@ -493,6 +500,8 @@ $value in $theme-colors {
     @include form-control-focus(); // Placeholder
     &::placeholder {
         color: #ccc;
+        font-family: $font-family-sans-serif;
+        font-weight: 400;
     }
     &:disabled,
     &[readonly] {
@@ -542,7 +551,7 @@ label {
 
 .form-control-lg {
     padding: ($input-padding-y-lg * 2.8) ($input-padding-x-lg * 1.5);
-    font-size: ($font-size-lg * 0.8);
+    font-size: ($font-size-lg * 0.75);
     line-height: $input-line-height-lg;
     @include border-radius($input-border-radius-lg);
 }

@@ -81,3 +81,202 @@
 .m-pagetransition {
   visibility: hidden;
 }
+
+
+.bootstrap-select {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    .bs-select-form-control.dropdown-toggle {
+        display: block !important;
+        border: 1px solid #eee !important;
+        padding: 0.63rem 1.5rem !important;
+        outline: none !important;
+        box-shadow: 0 0 0 0.5px #eee;
+
+        &::after {
+            margin-left: -0.5rem !important;
+        }
+    }
+
+    .dropdown-menu {
+        padding: 0;
+        border-radius: 0;
+        border-color: #ddd;
+        // border-bottom: none;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+        max-height: 200px !important;
+        // transform: translate3d(0px, -252px, 0px);
+        max-width: 100%;
+
+        .dropdown-item {
+            padding: 0.7rem 1rem;
+            transition: all 0.3s;
+            outline: none !important;
+            // font-size: 0.9rem;
+            transform: none !important;
+            font-weight: 300;
+            border-bottom: 1px solid #eee;
+
+            // &:last-of-type {
+            //     border-bottom: none;
+            // }
+
+            &.active, &:active {
+                background: $light !important;
+                color: $dark !important;
+            }
+        }
+    }
+
+    .filter-option-inner-inner {
+        color: $input-placeholder-color;
+        font-size: 0.9rem;
+        font-family: $headings-font-family;
+        font-weight: 500;
+        line-height: 1.5rem !important;
+        color: #000;
+
+        &.selected {
+            font-size: 1rem;
+            color: $dark;
+            font-weight: $font-weight-normal;
+        }
+    }
+
+    .bs-searchbox {
+        padding: 0.5rem;
+        input {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            &:focus {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+
+            &::placeholder {
+                font-weight: 300;
+            }
+        }
+    }
+
+    .no-results {
+        margin: 0 0.5rem 0.5rem 0.5rem;
+        padding: 0.2rem 1rem;
+    }
+
+
+    button.dropdown-toggle {
+        &::after {
+            border: none;
+            content: '\f078' !important;
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            font-size: 0.65rem;
+            vertical-align: middle !important;
+            padding-left: 0.1rem;
+            transform: translateY(2px);
+            color: #999 !important;
+            opacity: 1;
+        }
+    }
+    .dropdown-toggle[aria-expanded="true"] {
+        &::after {
+            content: '\f077' !important;
+        }
+    }
+}
+
+
+
+.datepicker td, .datepicker th {
+    text-align: center;
+    width: 14.285%;
+    height: 40px;
+    font-size: 0.8rem;
+    font-weight: $font-weight-normal;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+
+.datepicker {
+    tr:last-of-type {
+        th {
+            border-bottom: 1px solid #f5f5f5;
+            background: #fafafa;
+        }
+    }
+    tr {
+        border-bottom: 1px solid #f5f5f5;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+
+        td {
+            border-right: 1px solid #f5f5f5;
+
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+    }
+}
+
+
+
+.datepicker thead td, .datepicker thead th {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+}
+
+.datepicker.dropdown-menu {
+    width: calc(100% - 2rem);
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    .table-condensed {
+        width: 100%;
+    }
+}
+
+.datepicker table tr td.active.active {
+    background: $brand-primary;
+
+    &:hover {
+        background: darken($brand-primary, 5%);
+    }
+}
+
+.datepicker {
+    .month, .year {
+        border-radius: 0;
+        transition: all 0.3s;
+
+        &.focused.active {
+            background: $brand-primary !important;
+            border-radius: 0;
+
+            &:hover {
+                background: darken($brand-primary, 5%);
+            }
+        }
+    }
+
+    .clear, .today {
+        background: $brand-primary;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: $font-weight-bold;
+        height: 30px;
+
+        &:hover {
+            background: darken($brand-primary, 5%);
+        }
+    }
+}
+
+.datepicker table tr td.today, .datepicker table tr td.today:hover {
+    background: rgba($brand-primary, 0.2) !important;
+}
