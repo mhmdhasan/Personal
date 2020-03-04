@@ -123,6 +123,7 @@ $(function () {
                 "Looks good!!",
 				"Looks good!",
 				"Looks good!",
+				"Looks good!",
 				"Looks good!"
             );
 			var num = Math.floor(Math.random()*6);
