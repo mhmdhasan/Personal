@@ -79,14 +79,14 @@ $(function () {
     var datePickerHolder = $('.datepicker-1').parent('.form-group');
     $('.datepicker-1').datepicker({
         todayHighlight: true,
-        autoclose: true,
+        // autoclose: true,
         format: 'dd MM yyyy',
         container: datePickerHolder
     });
     var datePickerHolder1 = $('.datepicker-2').parent('.form-group');
     $('.datepicker-2').datepicker({
         todayHighlight: true,
-        autoclose: true,
+        // autoclose: true,
         format: 'dd MM yyyy',
         container: datePickerHolder1
     });
@@ -96,6 +96,10 @@ $(function () {
         var downPayment = ($(this).val() * 0.2);
 
         $('.down-payment').text(Math.ceil(downPayment));
+    });
+
+    $('.selectpicker').on('change', function () {
+        $(this).closest('.dropdown').find('.filter-option-inner-inner').addClass('selected');
     });
 
 });
