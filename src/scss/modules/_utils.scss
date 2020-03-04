@@ -270,3 +270,29 @@ $value in $theme-colors {
 .shadow-0 {
     box-shadow: none !important;
 }
+
+.list-check {
+    list-style: none;
+    li {
+        position: relative;
+        padding-left: 1.5rem;
+
+        .icon {
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            background: $brand-primary;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @extend %shadow;
+            font-family: $headings-font-family;
+            font-weight: $headings-font-weight;
+            position: absolute;
+            top: 3px;
+            left: 0;
+            font-size: 0.9rem;
+        }
+    }
+}

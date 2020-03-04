@@ -12,7 +12,13 @@ $(function () {
         autoplay: true,
         loop: true,
         dots: false,
-        mouseDrag: false
+        mouseDrag: false,
+        navText: ['<i class="text-gradient fas fa-long-arrow-alt-left"></i>', '<i class="text-gradient fas fa-long-arrow-alt-right"></i>'],
+        responsive: {
+            991: {
+                nav: true
+            }
+        }
     });
     $('.portfolio-carousel').owlCarousel({
         items: 1,

@@ -1,0 +1,51 @@
+extends _pug-includes/layout
+
+block vars 
+    - var current = 'Services';
+    - var design = true;
+
+block content
+    .m-pagetransition
+        include _pug-includes/sidebar.pug
+        .page-content.hp.px-2.px-lg-5.pb-4.pt-2.overflow-hidden.d-block
+            include _pug-includes/navbar.pug
+            
+            section.pb-5.pt-lg-5
+                .container-fluid
+                    .row.pt-4
+                        .col-lg-7
+                            h1.text-xl.serif-font-family.lined.mb-4 Design a website
+                            p.lead.text-muted.mb-5 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                    
+                        
+                    .row
+                        .col-lg-12
+                            h2.serif-font-family.lined.mb-4 How it works
+                            
+                            - var processSteps = []
+                            - processSteps.push({'number': '1', 'title': 'Collect data', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.'})
+                            
+                            - processSteps.push({'number': '2', 'title': 'Discuss available options', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '})
+                            
+                            - processSteps.push({'number': '3', 'title': 'Recieve a downpayment', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'})
+                            
+                            - processSteps.push({'number': '4', 'title': 'Provide a preview', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.'})
+                            
+                            - processSteps.push({'number': '5', 'title': 'Discuss comments', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '})
+                            
+                            - processSteps.push({'number': '6', 'title': 'Receive payments', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'})
+                            
+                            - processSteps.push({'number': '7', 'title': 'Deliever the design', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.'})
+                            
+                            - processSteps.push({'number': '8', 'title': 'Happy ending', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '})
+                            
+                            .row.align-items-stretch
+                                each val in processSteps
+                                    .col-xl-4.col-md-6.mb-4
+                                        .step.h-100
+                                            span.step-number.line-height-sm #{val.number}
+                                            .pt-1
+                                                h5.mb-1 #{val.title}
+                                                p.text-muted.mb-0 #{val.description} 
+                                    
+                                

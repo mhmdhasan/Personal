@@ -74,10 +74,12 @@
 
 .text-xl {
     @include media-breakpoint-up(lg) {
-        font-size: 4.5rem !important;
+        font-size: 4rem !important;
+        line-height: 1 !important;
     }
     @include media-breakpoint-up(xl) {
         font-size: 5rem !important;
+        line-height: 1 !important;
     }
 }
 
@@ -94,6 +96,9 @@
 %shadow {
     box-shadow: 0 2px 3px rgba(29, 182, 137, 0.2) !important;
 }
+%text-shadow {
+    text-shadow: 0 2px 3px rgba(29, 182, 137, 0.2) !important;
+}
 .text-gradient {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -105,6 +110,9 @@ body {
     overflow-x: hidden;
 }
 
+.line-height-sm {
+    line-height: 1 !important;
+}
 .line-height-md {
     line-height: 1.5 !important;
 }
@@ -218,7 +226,7 @@ hr {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 12rem;
+        font-size: 10rem;
         opacity: 0.02;
         z-index: -1;
         font-family: 'Abril Fatface', serif;
@@ -338,7 +346,7 @@ hr {
     color: #fff;
     position: absolute;
     top: -2.5rem;
-    left: -1rem;
+    left: 0;
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
     font-size: 0.85rem;
@@ -355,7 +363,7 @@ hr {
 
     &-right {
         left: auto;
-        right: -1rem;
+        right: 0;
         &::after {
             left: auto;
             right: 0;
@@ -476,5 +484,35 @@ hr {
     &:hover, &:focus {
         background: darken($brand-primary, 5%);
         color: #fff;
+    }
+}
+
+
+
+/*
+*
+* ==========================================
+* SERVICES
+* ==========================================
+*
+*/
+.step {
+    padding: 2rem;
+    transition: all 0.3s;
+    background: $light;
+    // @extend %shadow;
+
+    &-number {
+        font-size: 3rem;
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+        color: $brand-primary;
+        @extend %text-shadow;
+    }
+
+    &:hover {
+        background: $light;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+        transform: translateY(-2px);
     }
 }
