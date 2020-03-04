@@ -36,7 +36,7 @@
 
         &-flip {
             position: absolute;
-            right: 0;
+            right: 1rem;
             transform: translateX(0) rotateY(180deg);
             @include media-breakpoint-up(sm) {
                 display: none !important;
