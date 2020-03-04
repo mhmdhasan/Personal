@@ -34,6 +34,14 @@ $(function () {
         }
     });
 
+    $('.btn-loading').on('click', function() {
+        var $this = $(this);
+      $this.button('loading');
+        setTimeout(function() {
+           $this.button('reset');
+       }, 8000);
+    });
+
 
     /* ===============================================================
         PAGE TRANSITION EFFECT
@@ -91,6 +99,19 @@ $(function () {
     });
 
 });
+
+
+var textarea = document.querySelector('textarea');
+textarea.addEventListener('keydown', autosize);
+function autosize(){
+  var el = this;
+  setTimeout(function(){
+    el.style.cssText = 'height:auto; padding:0';
+    // for box-sizing other than "content-box" use:
+    // el.style.cssText = '-moz-box-sizing:content-box';
+    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+  },0);
+}
 
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit

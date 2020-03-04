@@ -518,6 +518,10 @@ select.form-control {
     }
 }
 
+textarea {
+    overflow: hidden;
+}
+
 .form-control-sm {
     padding: $input-padding-y-sm $input-padding-x-sm;
     font-size: $font-size-sm;

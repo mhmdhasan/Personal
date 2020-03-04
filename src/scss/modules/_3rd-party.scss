@@ -237,7 +237,7 @@
 .datepicker.dropdown-menu {
     width: calc(100% - 2rem);
     padding: 0.5rem 1rem;
-    border-radius: 0;
+    border-radius: $border-radius;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     .table-condensed {
         width: 100%;

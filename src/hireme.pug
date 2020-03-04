@@ -1,7 +1,8 @@
 extends _pug-includes/layout
 
 block vars 
-    - var current = 'Contact'
+    - var current = 'Hire Me';
+    - var hireme = true;
 
 block content
     .m-pagetransition
@@ -21,40 +22,37 @@ block content
                             .form-holder.p-4.p-lg-5.mb-5.shadow.bg-white.rounded
                                 .form-holder-icon.bg-primary
                                     i.fas.fa-magic
-                                form.contact-form(data-netlify="true", method="POST", action="/thanks", name="hire-form")
+                                form.contact-form#hireForm(data-netlify="true", method="POST", action="/thanks", name="hire-form")
                                     .row
                                         .form-group.col-lg-6
-                                            label.required First Name
-                                            input.form-control.form-control-lg(type='text', name='firstname', placeholder="Enter your first name")
+                                            label.required Full Name
+                                            input.form-control.form-control-lg(type='text', name='fullname', placeholder="Enter your full name", minlength="2", required)
                                         .form-group.col-lg-6
-                                            label.required Last Name
-                                            input.form-control.form-control-lg(type='text', name='lastname', placeholder="Enter your last name")
-                                        .form-group.col-lg-12
                                             label.required Email Address
                                             input.form-control.form-control-lg(type='email', name='email', placeholder="Enter your email address")
                                         .form-group.col-lg-6
                                             label.required Start Date
-                                            input.form-control.form-control-lg.datepicker-1(type="text", id="start-date", name="start-date", placeholder="Pick your desired date", autocomplete="off")    
+                                            input.form-control.form-control-lg.datepicker-1(type="text", id="start-date", name="start-date", placeholder="Pick your desired date", autocomplete="off", required)    
                                         .form-group.col-lg-6
                                             label.required End Date
-                                            input.form-control.form-control-lg.datepicker-2(type="text", id="end-date", name="end-date", placeholder="Pick your desired date", autocomplete="off")  
+                                            input.form-control.form-control-lg.datepicker-2(type="text", id="end-date", name="end-date", placeholder="Pick your desired date", autocomplete="off", required)  
                                         .form-group.col-lg-6
                                             label.required Job Type
-                                            select.selectpicker(name="job-type", data-style="bs-select-form-control", data-title="Select job type")
+                                            select.selectpicker(name="jobtype", data-style="bs-select-form-control", data-title="Select job type", required)
                                                 option(value="design-template") Design a template
                                                 option(value="psd-to-bootstrap") PSD to Bootstrap
                                                 option(value="bootstrapize-template") Bootstrapize a template
                                         .form-group.col-lg-6
-                                            label.required Estimated Budget
+                                            label Estimated Budget
                                             input.form-control.form-control-lg(type='number', name='budget', placeholder="Your estimated budget by $")
                                             span.form-text.text-gray The estimated down payment will be 
                                                 span.text-dark.font-weight-bold.font-family-heading $
                                                 span.down-payment.text-dark.font-weight-bold.font-family-heading 0
                                         .form-group.col-lg-12
                                             label.required Job Description
-                                            textarea.form-control.form-control-lg.py-3(name='message', rows="6", placeholder="Enter your message")
+                                            textarea.form-control.form-control-lg.py-3(name='message', rows="6", placeholder="Enter your message", required)
                                         .form-group.col-lg-12.mb-0
                                             button.btn.btn-primary.py-2.btn-block(type="submit")
-                                                span.py-1.d-block Submit your request
+                                                span.py-1.d-inline-block Submit your request
                                             
                         

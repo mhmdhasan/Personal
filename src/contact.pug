@@ -2,6 +2,7 @@ extends _pug-includes/layout
 
 block vars 
     - var current = 'Contact'
+    - var contact = true;
 
 block content
     .m-pagetransition
@@ -21,20 +22,20 @@ block content
                             .form-holder.p-4.p-lg-5.mb-5.shadow-sm.bg-white.rounded
                                 .form-holder-icon.bg-primary
                                     i.fas.fa-paper-plane
-                                form.contact-form(data-netlify="true", method="POST", action="/thanks", name="contactform")
+                                form#contactForm.contact-form(data-netlify="true", method="POST", action="/thanks", name="contactform")
                                     .row
                                         .form-group.col-lg-6
                                             label.required First Name
-                                            input.form-control.form-control-lg(type='text', name='firstname', placeholder="Enter your first name")
+                                            input.form-control.form-control-lg(type='text', name='firstname', placeholder="Enter your first name", required)
                                         .form-group.col-lg-6
                                             label.required Last Name
-                                            input.form-control.form-control-lg(type='text', name='lastname', placeholder="Enter your last name")
+                                            input.form-control.form-control-lg(type='text', name='lastname', placeholder="Enter your last name", required)
                                         .form-group.col-lg-12
                                             label.required Email Address
-                                            input.form-control.form-control-lg(type='email', name='email', placeholder="Enter your email address")
+                                            input.form-control.form-control-lg(type='email', name='email', placeholder="Enter your email address", required)
                                         .form-group.col-lg-12
                                             label.required Your message
-                                            textarea.form-control.form-control-lg.py-3(name='message', rows="4", placeholder="Enter your message")
+                                            textarea.form-control.form-control-lg.py-3(name='message', rows="4", placeholder="Enter your message", required)
                                         .form-group.col-lg-12.mb-0
                                             button.btn.btn-primary.py-2.btn-block(type="submit") Send your message
                                             
