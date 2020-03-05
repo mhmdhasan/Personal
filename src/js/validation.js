@@ -1,6 +1,6 @@
 $(function () {
 
-    $("#hireForm, #designForm").validate({
+    $("#hireForm, #designForm, #createForm, #bootstrapizeForm").validate({
         rules: {
             fullname: "required",
             email: {
