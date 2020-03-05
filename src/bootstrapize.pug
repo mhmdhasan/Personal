@@ -1,0 +1,90 @@
+extends _pug-includes/layout
+
+block vars 
+    - var current = 'Services';
+    - var validation = true;
+
+block content
+    .m-pagetransition
+        include _pug-includes/sidebar.pug
+        .page-content.hp.px-2.px-lg-5.pb-4.pt-2.overflow-hidden.d-block
+            include _pug-includes/navbar.pug
+            
+            section.pb-5.pt-lg-5
+                .container-fluid
+                    .row.pt-4
+                        .col-lg-9
+                            h1.text-xl.serif-font-family.lined.mb-4.pb-lg-3 Bootstrapize a website
+                        .col-lg-7
+                            p.lead.text-muted.mb-5 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                    
+                        
+                    .row.pb-5
+                        .col-lg-12
+                            h2.serif-font-family.lined.mb-4 How it works
+                            
+                            - var processSteps = []
+                            - processSteps.push({'number': '1', 'title': 'Collect data', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy.'})
+                            
+                            - processSteps.push({'number': '2', 'title': 'Discuss available options', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '})
+                            
+                            - processSteps.push({'number': '3', 'title': 'Set a timeframe', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'})
+                            
+                            - processSteps.push({'number': '4', 'title': 'Recieve a downpayment', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'})
+                            
+                            - processSteps.push({'number': '5', 'title': 'Provide a preview', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy.'})
+                            
+                            - processSteps.push({'number': '6', 'title': 'Discuss comments', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '})
+                            
+                            - processSteps.push({'number': '7', 'title': 'Receive payments', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s.'})
+                            
+                            - processSteps.push({'number': '8', 'title': 'Deliever the design', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy.'})
+                            
+                            - processSteps.push({'number': '9', 'title': 'Happy ending', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '})
+                            
+                            .row.align-items-stretch
+                                each val in processSteps
+                                    .col-xl-4.col-md-6.mb-4
+                                        .step.h-100.rounded
+                                            span.step-number.line-height-sm #{val.number}
+                                            .pt-1
+                                                h5.mb-1 #{val.title}
+                                                p.text-muted.mb-0 #{val.description} 
+                                    
+                                
+                    .row
+                        .col-lg-8
+                            h2.serif-font-family.lined.mb-4 Submit the form
+                            p.lead.text-muted.mb-5 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy, when an unknown printer took a galley of type and scrambled
+                            
+                            .form-holder.p-4.p-lg-5.mb-5.shadow.bg-white.rounded
+                                .form-holder-icon.bg-primary
+                                    i.fas.fa-pen-nib
+                                form.contact-form#bootstrapizeForm(data-netlify="true", method="POST", action="/thanks", name="bootstrapize-form")
+                                    .row
+                                        .form-group.col-lg-6
+                                            label.required Full Name
+                                            input.form-control.form-control-lg(type='text', name='fullname', placeholder="Enter your full name", minlength="2", required)
+                                        .form-group.col-lg-6
+                                            label.required Email Address
+                                            input.form-control.form-control-lg(type='email', name='email', placeholder="Enter your email address")
+                                        .form-group.col-lg-6
+                                            label.required Start Date
+                                            input.form-control.form-control-lg.datepicker-1(type="text", id="start-date", name="start-date", placeholder="Pick your desired date", autocomplete="off", required)    
+                                        .form-group.col-lg-6
+                                            label.required End Date
+                                            input.form-control.form-control-lg.datepicker-2(type="text", id="end-date", name="end-date", placeholder="Pick your desired date", autocomplete="off", required)  
+                                        .form-group.col-lg-12
+                                            label Estimated Budget
+                                            input.form-control.form-control-lg(type='number', min='5', name='budget', placeholder="Your estimated budget by $")
+                                            span.form-text.text-gray The estimated down payment will be 
+                                                span.text-dark.font-weight-bold.font-family-heading $
+                                                span.down-payment.text-dark.font-weight-bold.font-family-heading 0
+                                        .form-group.col-lg-12
+                                            label.required Job Description
+                                            textarea.form-control.form-control-lg.py-3(name='message', rows="6", placeholder="Enter your message", required)
+                                        .form-group.col-lg-12.mb-0
+                                            button.btn.btn-primary.py-2.btn-block(type="submit")
+                                                span.py-1.d-inline-block Submit your request
+                                            
+                        
