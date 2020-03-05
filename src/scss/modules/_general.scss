@@ -213,33 +213,9 @@ hr {
     }
 }
 
-@media (min-width: 992px) {
-    .animate {
-        animation-duration: 0.3s;
-        -webkit-animation-duration: 0.3s;
-        animation-fill-mode: both;
-        -webkit-animation-fill-mode: both;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(1rem);
-        opacity: 0;
-    }
-    100% {
-        transform:translateY(0rem);
-        opacity: 1;
-    }
-    0% {
-        transform: translateY(1rem);
-        opacity: 0;
-    }
-}
-
-.navSlideIn {
-    -webkit-animation-name: slideIn;
-    animation-name: slideIn;
+.navbar {
+    .dropdown-menu {display: block;visibility: hidden;opacity:0;transform: translateY(0.5rem);transition:.2s ease all;}
+    .dropdown-menu.show {display: block;visibility: visible;opacity:1;transform: translateY(0px);transition:.2s ease all;}
 }
 
 
