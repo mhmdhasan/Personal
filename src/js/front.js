@@ -108,6 +108,16 @@ $(function () {
         $(this).closest('.dropdown').find('.filter-option-inner-inner').addClass('selected');
     });
 
+
+    /* ===============================================================
+    *   CUSTOM FILE INPUT
+    * =============================================================== */
+    $(":file").filestyle({
+        buttonBefore: true,
+        btnClass: "btn-primary",
+        placeholder: "No file chosen"
+    });
+
 });
 
 

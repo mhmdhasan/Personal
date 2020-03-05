@@ -282,3 +282,16 @@
 .datepicker table tr td.today, .datepicker table tr td.today:hover {
     background: rgba($brand-primary, 0.2) !important;
 }
+
+
+.bootstrap-filestyle {
+    .form-control:disabled {
+        background: #fafafa;
+        border-color: #fafafa;
+        box-shadow: none;
+    }
+
+    .btn {
+        cursor: pointer;
+    }
+}
