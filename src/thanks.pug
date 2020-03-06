@@ -17,8 +17,14 @@ block content
                                 +navLink('about.html', 'About') 
                             li.nav-item.mr-lg-3
                                 +navLink('portfolio.html', 'Portfolio') 
-                            li.nav-item.mr-lg-3
+                            li.nav-item
                                 +navLink('contact.html', 'Contact') 
+                            li.nav-item.dropdown
+                                a.nav-link.dropdown-toggle.pl-4#services(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Services
+                                .dropdown-menu.navSlideIn.animate(aria-labelledby='services')
+                                    a.dropdown-item.transition-link(href='design.html') Desgin a website
+                                    a.dropdown-item.transition-link(href='create.html') Create a website
+                                    a.dropdown-item.transition-link(href='bootstrapize.html') Bootstrapize a website
             
             .map
             
