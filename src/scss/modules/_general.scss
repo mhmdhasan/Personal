@@ -105,6 +105,27 @@
     background-image: linear-gradient(to right, #1db689, #1db689) !important;
     color: #fff;
 }
+.alert-home {
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media-breakpoint-down(md) {
+        position: static;
+        transform: none;
+    }
+}
+
+.alert-primary {
+    background: white !important;
+    border-color: lighten($primary, 10%) !important;
+    color: darken($primary, 30%) !important;
+
+    .alert-link {
+        color: darken($primary, 50%);
+    }
+}
 
 body {
     overflow-x: hidden;
