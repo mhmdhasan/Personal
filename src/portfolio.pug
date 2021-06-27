@@ -2,6 +2,7 @@ extends _pug-includes/layout
 
 block vars 
     - var current = 'Portfolio'
+    - var domain = 'mohamedhasan.site'
 
 block content
     .m-pagetransition
@@ -15,74 +16,102 @@ block content
             section.pb-5.pt-lg-5
                 .container-fluid
                     // HTML TEMPLATES
-                    .row.pb-4.pt-4.text-center.mb-5.pb-5
-                        .col-lg-8.mx-auto
-                            h2.serif-font-family.lined.lined-center.mb-4.text-xl.pb-lg-3 HTML templates
-                            p.lead.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                                
-                            .owl-carousel.owl-theme.portfolio-carousel
-                                - var htmlItems = [] 
-                                
-                                //- Item
-                                - htmlItems.push({'title': 'Italiano Restaurant', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'image': 'italiano.png', 'url': 'https://italianolight.netlify.com', 'themeforest': true})
-                                //- Item
-                                - htmlItems.push({'title': 'Neon Dashboard', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', 'image': 'neon.png', 'url': 'https://neon.mohamedhasan.tech/charts'})
-                                //- Item
-                                - htmlItems.push({'title': 'Travel Blog', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', 'image': 'travel.png', 'url': 'https://travel.mohamedhasan.tech'})
-                                //- Item
-                                - htmlItems.push({'title': 'Juliette Blog', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', 'image': 'juliette.png', 'url': 'https://juliette.mohamedhasan.tech'})
-                                //- Item
-                                - htmlItems.push({'title': 'Dark Dashboard', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', 'image': 'darkadmin.png', 'url': 'https://dashdark.mohamedhasan.tech'})
-
-                                //- Item
-                                //- - htmlItems.push({'title': '', 'description': '', 'image': '', 'url': ''})
-                                
-                                each val in htmlItems
-                                    .row.text-left.pt-5.align-items-center.mb-2
-                                        
-                                        .col-lg-6.text-center.text-lg-right.index-forward.order-2.order-lg-1
-                                            h2.h4 #{val.title}
-                                            p.text-muted #{val.description}
-                                            if (val.themeforest == true)
-                                                a.btn.btn-outline-primary.m-1(href=val.url, target="_blank") Buy on Themeforest
-                                            a.btn.btn-primary.m-1(href=val.url, target="_blank") Live preview
-                                            
-                                            
-                                        .col-lg-6.order-1.order-lg-2
-                                            .shot.mb-4.mb-lg-0
-                                                img.img-fluid(src="img/" + val.image, alt="...")
+                    .text-center.mb-5.pb-5
+                        h2.serif-font-family.lined.lined-center.mb-4.text-xl.pb-lg-3 HTML Templates
+                        .row
+                            .col-lg-8.mx-auto
+                                p.lead.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        
+                        .row
+                            .col-lg-11.mx-auto
+                                .owl-carousel.owl-theme.portfolio-carousel
+                                    - var htmlItems = [] 
                                     
+                                    - htmlItems.push({'title': 'Italiano Restaurant', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'image': 'italiano.png', 'url': `https://italianolight.netlify.com`})
+                                    
+                                    - htmlItems.push({'title': 'Neon Dashboard', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', 'image': 'neon.png', 'url': `https://neon.${domain}`})
+                                    
+                                    - htmlItems.push({'title': 'Travel Blog', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', 'image': 'travel.png', 'url': `https://travel.${domain}`})
+                                    
+                                    - htmlItems.push({'title': 'Juliette Blog', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', 'image': 'juliette.png', 'url': `https://juliette.${domain}`})
+                                    
+                                    - htmlItems.push({'title': 'Dark Dashboard', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s', 'image': 'darkadmin.png', 'url': `https://dashdark.${domain}`})
+
+                                    each val in htmlItems
+                                        .px-3
+                                            .row.align-items-center.my-5
+                                                .col-lg-5.text-lg-right.order-2.order-lg-1
+                                                    h2.h4.text-uppercase #{val.title}
+                                                    p.text-muted #{val.description}
+                                                    if (val.themeforest == true)
+                                                        a.btn.btn-outline-primary.m-1(href=val.url, target="_blank") Buy on Themeforest
+                                                    a.btn.btn-primary.m-1(href=val.url, target="_blank") Live preview
+                                                .col-lg-7.order-1.order-lg-2.mb-4.mb-md-5.mb-lg-0
+                                                    .shot
+                                                        .image
+                                                            img.img-fluid(src="img/" + val.image, alt="...", height="200")
                                     
                     // PSD TEMPLATES                
-                    .row.pb-4.pt-4.text-center.mb-5.pb-5
-                        .col-lg-8.mx-auto
-                            h2.serif-font-family.lined.lined-center.mb-4.text-xl.pb-lg-3 Design shots
-                            p.lead.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                    .text-center.mb-5.pb-5
+                        h2.serif-font-family.lined.lined-center.mb-4.text-xl.pb-lg-3 Design Shots
+                        .row
+                            .col-lg-8.mx-auto
+                                p.lead.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
                                 
-                            .owl-carousel.owl-theme.portfolio-carousel
-                                - var designItems = [] 
-                                
-                                //- Item
-                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
-                                //- Item
-                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
-                                //- Item
-                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
-                                //- Item
-                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
-                                //- Item
-                                - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
+                        .row
+                            .col-lg-11.mx-auto    
+                                .owl-carousel.owl-theme.portfolio-carousel
+                                    - var designItems = [] 
+                                    
+                                    - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
+                                    
+                                    - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
+                                    
+                                    - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
+                                    
+                                    - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
+                                    
+                                    - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
 
-                                //- Item
-                                //- - designItems.push({'title': '', 'description': '', 'image': '', 'url': ''})
-                                
-                                each val in designItems
-                                    .row.text-left.pt-5.align-items-center.mb-2
-                                        .col-lg-6
-                                            .shot.mb-4.mb-lg-0
-                                                img.img-fluid(src="img/" + val.image, alt="...")
-                                                    
-                                        .col-lg-6.text-center.text-lg-left.index-forward
-                                            h2.h4 #{val.title}
+                                    each val in designItems
+                                        .px-3
+                                            .row.align-items-center.my-5
+                                                .col-lg-5.text-lg-right.order-2.order-lg-1
+                                                    h2.h4.text-uppercase #{val.title}
+                                                    p.text-muted #{val.description}
+                                                    if (val.themeforest == true)
+                                                        a.btn.btn-outline-primary.m-1(href=val.url, target="_blank") Buy on Themeforest
+                                                    a.btn.btn-primary.m-1(href=val.url, target="_blank") Live preview
+                                                .col-lg-7.order-1.order-lg-2.mb-4.mb-md-5.mb-lg-0
+                                                    .shot
+                                                        .image
+                                                            img.img-fluid(src="img/" + val.image, alt="...", height="200")
+
+
+                    // Bootstrap Snippets                
+                    .text-center
+                        h2.serif-font-family.lined.lined-center.mb-4.text-xl.pb-lg-3 Code Snippets
+                        .row.mb-5
+                            .col-lg-8.mx-auto
+                                p.lead.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        
+                        .row.text-left.snippets-holder
+                            
+                            - var snippets = []
+                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
+                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
+                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
+                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
+                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
+                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
+                            
+                            each val in snippets
+                                .col-lg-4.mb-4
+                                    .card.card-animated.border-0
+                                        .card-body.rounded.shadow.p-lg-5
+                                            h3.h4 #{val.title}
                                             p.text-muted #{val.description}
-                                            a.btn.btn-primary.m-1(href=val.url, target="_blank") Live preview
+                                            a.btn.btn-primary.btn-sm(href=val.url) View snippet
+                            
+                            .col-12.py-4.text-center
+                                button.btn.btn-outline-primary#moreSnippetsBtn(type="button") More snippets

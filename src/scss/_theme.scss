@@ -235,6 +235,14 @@
     }
 }
 
+
+@each $color,
+$value in $theme-colors {
+    .btn-#{$color} {
+        box-shadow: 0 2px 3px rgba($value, 0.2);
+    }
+}
+
 .btn-primary {
     @extend %shadow;
 }
@@ -285,6 +293,23 @@ $value in $theme-colors {
 .btn-sm {
     @include button-size($btn-padding-y-sm, $btn-padding-x-sm, ($font-size-sm * 0.9 ), $btn-line-height-sm, $btn-border-radius-sm);
 }
+
+@each $color,
+$value in $theme-colors {
+    .btn-outline-#{$color} {
+        &:not(.btn-outline-light) {
+            &:focus {
+                color: $value;
+            }
+        }
+        &:not(.btn-outline-light) {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
 
 /*
  * 3. TYPE
