@@ -9,6 +9,21 @@ script(src='js/page-transition.js')
 script(src='js/bootstrap-filestyle.js')
 script(src='js/front.js')
 
+if (home)
+    script(src='vendor/particles.js/particles.js')
+    script.
+        if (window.innerWidth > 768) {
+            particlesJS.load('particles-js', 'js/particles.json', function() {
+                console.log('particles is moving');
+            });
+        } else {
+            particlesJS.load('particles-js', 'js/particles-mb.json', function() {
+                console.log('particles is moving');
+            });
+        }
+        
+        
+
 if (validation)
     script(src='vendor/jquery-validation/jquery.validate.min.js')
     script(src='js/validation.js')
