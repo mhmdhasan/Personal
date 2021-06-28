@@ -1,11 +1,15 @@
+let windowHeight = $(window).innerHeight();
+$('.page-content').css('min-height', `${windowHeight}px`);
+
 $(function () {
-
-    let windowHeight = $(window).innerHeight();
-    $('.page-content').css('min-height', `${windowHeight}px`);
-
 
     $('a[href="#"]').on('click', function (e) {
         e.preventDefault();
+    });
+
+    let preloader = $('.preloader');
+    $(window).on('load', function () {
+        preloader.fadeOut().remove();
     });
 
     $('.hero-carousel').owlCarousel({

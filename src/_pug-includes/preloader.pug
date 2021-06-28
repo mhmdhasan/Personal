@@ -1,0 +1,28 @@
+.preloader
+    // Preloader 
+    .preloader-inner.d-flex.align-items-center.justify-content-center.w-100.h-100
+        .position-relative.text-center
+            
+            .spinner-holder.d-inline-block
+                .spinner
+                    .item
+                    .item
+                    .item
+                    .item
+                    .item
+                    .item
+                    .item
+                    .item
+                    
+            svg.d-none
+                defs
+                    filter#goo
+                        feGaussianBlur(in='SourceGraphic', stdDeviation='8', result='blur')
+                        feColorMatrix(in='blur', data-mode='matrix', values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 50 -8', result='goo')
+                        feBlend(in='SourceGraphic', in2='goo')
+            
+            .text-center
+                p.h2.mb-0.text-uppercase Mohamed Hasan
+                p.font-weight-light.text-gray.mb-0 Front End Web Developer
+                
+    
