@@ -76,16 +76,17 @@ block content
                                     each val in designItems
                                         .px-3
                                             .row.align-items-center.my-5
-                                                .col-lg-5.text-lg-right.order-2.order-lg-1
+                                                .col-lg-7.mb-4.mb-md-5.mb-lg-0
+                                                    .shot
+                                                        .image
+                                                            img.img-fluid(src="img/" + val.image, alt="...", height="200")
+                                                .col-lg-5.text-lg-left
                                                     h2.h4.text-uppercase #{val.title}
                                                     p.text-muted #{val.description}
                                                     if (val.themeforest == true)
                                                         a.btn.btn-outline-primary.m-1(href=val.url, target="_blank") Buy on Themeforest
                                                     a.btn.btn-primary.m-1(href=val.url, target="_blank") Live preview
-                                                .col-lg-7.order-1.order-lg-2.mb-4.mb-md-5.mb-lg-0
-                                                    .shot
-                                                        .image
-                                                            img.img-fluid(src="img/" + val.image, alt="...", height="200")
+                                                
 
 
                     // Bootstrap Snippets                
@@ -109,7 +110,7 @@ block content
                                 .col-lg-4.mb-4
                                     .card.card-animated.border-0
                                         .card-body.rounded.shadow.p-lg-5
-                                            h3.h4 #{val.title}
+                                            h3.h5.font-weight-normal #{val.title}
                                             p.text-muted #{val.description}
                                             a.btn.btn-primary.btn-sm(href=val.url) View snippet
                             

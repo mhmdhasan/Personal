@@ -12,81 +12,61 @@ block content
             .container.pt-5.text-center
                 include _pug-includes/maintainance-alert.pug
             
-            section.pb-5.pt-lg-5
+            section.pt-lg-5
                 .container-fluid
-                    .row.pb-4.text-center.pt-4
-                        .col-lg-8.mx-auto
-                            h1.serif-font-family.lined.lined-center.mb-4.text-xl.pb-lg-3 Professional summary
-                            p.h5.base-font-family.line-height-md.mb-4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.
+                    .row.py-4.mb-4
+                        .col-lg-10.mx-auto
+                            h1.serif-font-family.lined.mb-4.text-xl.pb-lg-3 Professional summary
+                            p.h5.base-font-family.line-height-md.mb-4 An innovative front end web developer who has been implementing web design and development principles to build stable software for more than 4 years, bringing mock-ups to life using HTML, CSS, JavaScript, building websites and apps that are responsive and usable and monitoring website performance and rectifying front-end-related issues.
                             
                             p.lead.text-muted.mb-4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
                             
                             a.btn.btn-primary(href="#") Download resume
 
-                    .row.text-center
+                    .row
                         .col-lg-10.mx-auto
                             .py-5.px-4.px-lg-5.bg-light.my-5.quote
                                 p.lead-2x.mb-4 "If you give a good idea to a mediocre team, they will screw it up. If you give a mediocre idea to a brilliant team, they will either fix it or throw it away and come up with something better." 
                                 h6.mb-0.text-primary - Ed Catmull
-            
-                    .row.pt-4
+                    
+                    
+                    - var workExp = []
+                    - workExp.push({'title': 'Bootstrap Expert', 'location': 'Bootstrapious', 'description': 'I\'m currently responsible for all stuff related to Twitter Bootstrap. Developing high-end Bootstrap templates by working on the Bootstrap source code, upgrading the old versioned templates to the latest one, bootstrapize non Bootstrap templates, and building Bootstrap templates from absolute scratch.', 'date': '2019 - Current'})
+                    - workExp.push({'title': 'UI/UX Front End Web Developer', 'location': 'IT Roots', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'date': '2018 - 2019'})
+                    - workExp.push({'title': 'Junior UI Developer', 'location': 'Freelancer', 'description': 'My very first position as a front end web developer, I was mainly responsible for crafting the UI enhancements of the company\'s projects.', 'date': '2015 - 2017'})
+                    - workExp.push({'title': 'Front End web developer', 'location': 'Tech Station', 'description': 'My very first position as a front end web developer, I was mainly responsible for crafting the UI enhancements of the company\'s projects.', 'date': '2017 - 2018'})
+                    
+                    
+                    - var education = []
+                    - education.push({'title': 'Online studies & Researches', 'location': 'Online platforms', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'date': '2018 - Current'})
+                    - education.push({'title': 'Bachelor of Applied Science (BASc)', 'location': 'Benha University', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.', 'date': '2013 - 2019'})
+                    - education.push({'title': 'General Science Student', 'location': 'Tanta University', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'date': '2011 - 2013'})
+                    - education.push({'title': 'High School', 'location': 'Naser secondary school', 'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'date': '2009 - 2011'})
+                    
+                    
+                    
+                    .row.py-4.mb-4
                         .col-xl-10.mx-auto
+                            h2.heading-lg.serif-font-family.lined.mb-4.mb-5 Work experience
                             .row
-                                .col-xl-6.mx-auto.pr-lg-5
-                                    .pb-5
-                                        h2.serif-font-family.lined.mb-4.mb-5 Work experience
-                                    .mb-5.pb-4.bg-white.timeline-item
+                                each val, index in workExp
+                                    .col-lg-6.mt-5
                                         span.date
                                             i.fas.fa-calendar-minus.mr-2
-                                            span 2018 - Current
-                                        h5.mb-0 Bootstrap expert
-                                        p.text-small.text-uppercase.text-gray.mb-1 Freelancer
-                                        p.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                    .mb-5.pb-4.bg-white.timeline-item
+                                            span #{val.date}
+                                        h5.mb-0 #{val.title}
+                                        p.text-small.text-uppercase.text-gray.mb-1 #{val.location}
+                                        p.text-muted #{val.description}
+                    
+                    .row.pt-4.mb-5
+                        .col-xl-10.mx-auto
+                            h2.heading-lg.serif-font-family.lined.mb-4.mb-5 Education
+                            .row
+                                each val, index in education
+                                    .col-lg-6.mt-5
                                         span.date
                                             i.fas.fa-calendar-minus.mr-2
-                                            span 2015 - 2018
-                                        h5.mb-0 Front End Web Developer
-                                        p.text-small.text-uppercase.text-gray.mb-1 Freelancer
-                                        p.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                    .mb-5.pb-4.bg-white.timeline-item
-                                        span.date
-                                            i.fas.fa-calendar-minus.mr-2
-                                            span 2013 - 2015
-                                        h5.mb-0 UI/UX Web designer
-                                        p.text-small.text-uppercase.text-gray.mb-1 Freelancer
-                                        p.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                        
-                                .col-xl-6.mx-auto.pr-lg-5
-                                    .pb-5
-                                        h2.serif-font-family.lined.mb-4.mb-5 Education
-                                    .mb-5.pb-4.bg-white.timeline-item
-                                        span.date
-                                            i.fas.fa-calendar-minus.mr-2
-                                            span 2018 - Current
-                                        h5.mb-0 Bootstrap expert
-                                        p.text-small.text-uppercase.text-gray.mb-1 Freelancer
-                                        p.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                    .mb-5.pb-4.bg-white.timeline-item
-                                        span.date
-                                            i.fas.fa-calendar-minus.mr-2
-                                            span 2015 - 2018
-                                        h5.mb-0 Front End Web Developer
-                                        p.text-small.text-uppercase.text-gray.mb-1 Freelancer
-                                        p.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                    .mb-5.pb-4.bg-white.timeline-item
-                                        span.date
-                                            i.fas.fa-calendar-minus.mr-2
-                                            span 2013 - 2015
-                                        h5.mb-0 UI/UX Web designer
-                                        p.text-small.text-uppercase.text-gray.mb-1 Freelancer
-                                        p.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                        
-                        //- .col-xl-10.mx-auto
-                        //-     h2.serif-font-family.lined.mb-4.mb-5 Work Proccess
-                        //- 
-                        //-     .row
-                        //-         .col-lg-3
-                        //-             .bg-light.p-4
-                        //-                 i.fab.fa-facebook-f.text-primary.text-shadow.fa-2x.mb-4
-                        //-                 h5 Idea
+                                            span #{val.date}
+                                        h5.mb-0 #{val.title}
+                                        p.text-small.text-uppercase.text-gray.mb-1 #{val.location}
+                                        p.text-muted #{val.description}

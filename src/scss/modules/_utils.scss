@@ -71,6 +71,15 @@
         .border#{$infix} {
             border: $border-width solid $border-color !important;
         }
+        .box#{$infix}-shadow {
+            box-shadow: $box-shadow !important;
+        }
+        @each $color,
+        $value in $theme-colors {
+            .bg#{$infix}-#{$color} {
+                background: $value !important;
+            }
+        }
     }
 }
 

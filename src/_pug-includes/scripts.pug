@@ -12,15 +12,20 @@ script(src='js/front.js')
 if (home)
     script(src='vendor/particles.js/particles.js')
     script.
-        if (window.innerWidth > 768) {
-            particlesJS.load('particles-js', 'js/particles.json', function() {
-                console.log('particles is moving');
-            });
-        } else {
-            particlesJS.load('particles-js', 'js/particles-mb.json', function() {
-                console.log('particles is moving');
-            });
+        function compareViewports() {
+            if (window.innerWidth > 768) {
+                particlesJS.load('particles-js', 'js/particles.json', function() {
+                    console.log('particles is moving');
+                });
+            } else {
+                particlesJS.load('particles-js', 'js/particles-mb.json', function() {
+                    console.log('particles is moving');
+                });
+            }
         }
+        compareViewports();
+        window.addEventListener('resize', compareViewports);
+        
         
         
 

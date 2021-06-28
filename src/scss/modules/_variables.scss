@@ -103,6 +103,7 @@ $theme-colors: map-merge((
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
+  "white":      $white,
   "dark":       $dark
 ), $theme-colors);
 // stylelint-enable
@@ -253,7 +254,7 @@ $font-size-lg:                ($font-size-base * 1.25) !default;
 $font-size-sm:                ($font-size-base * .875) !default;
 
 $font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
+$font-weight-normal:          500 !default;
 $font-weight-bold:            700 !default;
 
 $font-weight-base:            $font-weight-light !default;
