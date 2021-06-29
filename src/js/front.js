@@ -140,7 +140,7 @@ $(function () {
                 let shortText = $(this).html().substr(0, textLength);
                 let longText = $(this).html().substr(textLength);
 
-                $(this).html(shortText + `<a href="#" class="view-more reset-anchor text-primary">...read more</a><span class="rest-text" style="display: none;">${longText}</span>`);
+                $(this).html(shortText + `<a href="#" class="view-more reset-anchor text-primary font-italic">...read more</a><span class="rest-text" style="display: none;">${longText}</span>`);
 
 
                 $(document).on('click', '.view-more', function (e) {
