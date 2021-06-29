@@ -63,7 +63,7 @@ block content
                                 .owl-carousel.owl-theme.portfolio-carousel
                                     - var designItems = [] 
                                     
-                                    - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
+                                    - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': 'https://jsfiddle.net/MhmdHasan/9Le4uo5w/14/'})
                                     
                                     - designItems.push({'title': 'Italiano Restaurant', 'description': 'Spicy is a modern clean HTML template for Cafe & Restaurant and any food-related business website. It comes with a modern and smooth design.', 'image': 'juliette.png', 'url': '#'})
                                     
@@ -97,22 +97,31 @@ block content
                                 p.lead.text-muted.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
                         
                         .row.text-left.snippets-holder
-                            
                             - var snippets = []
-                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
-                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
-                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
-                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
-                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
-                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': ''})
+                            - snippets.push({'title': 'Bootstrap Calendar', 'description': ' nicely-designed Bootstrap calendar widget. This calendar is just a for design purpose, you can make it work.', 'url': 'a4oh1uxd/2/'})
+                            - snippets.push({'title': 'Boostrap Checklist', 'description': 'Using Bootstrap 5 checkbox component, create an elegant checkbox list.', 'url': '9Le4uo5w/14/'})
+                            - snippets.push({'title': 'Bootstrap vertical tabs', 'description': 'Making advantage of Bootstrap 4 components, easily build an awesome tabbed interface.', 'url': 'afLphyn7/3'})
+                            - snippets.push({'title': 'Animated play button', 'description': 'Using css animation and pseudo elements, create a nice animated play button.', 'url': 'dqav4kjw/3'})
+                            - snippets.push({'title': 'Bootstrap checkobox list', 'description': 'Using Bootstrap 4 custom checkboxes, build an elegant food form', 'url': 'za8b1ph3/2'})
+                            - snippets.push({'title': 'Bootstrap carousel quotes', 'description': 'Create an elegant quote carousel using default Bootstrap 4 carousel component.', 'url': '1xk9h0z5/3'})
                             
                             each val in snippets
-                                .col-lg-4.mb-4
+                                .col-lg-4.col-md-6.mb-4
                                     .card.card-animated.border-0
                                         .card-body.rounded.shadow.p-lg-5
                                             h3.h5.font-weight-normal #{val.title}
-                                            p.text-muted #{val.description}
-                                            a.btn.btn-primary.btn-sm(href=val.url) View snippet
+                                            p.text-muted.limited-text #{val.description}
+                                            button.btn.btn-primary.btn-sm.snippet-btn(type="button", data-source=`${val.url}` data-target="#snippetModal", data-toggle='modal') View snippet
                             
                             .col-12.py-4.text-center
                                 button.btn.btn-outline-primary#moreSnippetsBtn(type="button") More snippets
+                                                            
+
+
+    .modal.fade#snippetModal
+        .modal-dialog.modal-lg.border-0
+            .modal-content.border-0.rounded.rounded-xl.overflow-hidden
+                .snippet-modal.rounded.rounded-xl
+                    .close-snippet(data-dismiss="modal")
+                    script(async, src="//jsfiddle.net/MhmdHasan/a4oh1uxd/2/embed/result,js,html,css/")
+    

@@ -290,3 +290,10 @@
         cursor: pointer;
     }
 }
+
+
+.modal-content iframe {
+    max-height: 100vh;
+    min-height: calc(100vh - 2rem);
+    overflow-y: scroll;
+}

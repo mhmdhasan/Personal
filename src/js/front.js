@@ -130,6 +130,74 @@ $(function () {
     }
 
 
+
+    /* ===============================================================
+    *   SHOW MORE BUTTON
+    * =============================================================== */
+    function viewMoreBtn(selector, textLength) {
+        $(selector).each(function (e) {
+            if ($(this).html().length > textLength) {
+                let shortText = $(this).html().substr(0, textLength);
+                let longText = $(this).html().substr(textLength);
+
+                $(this).html(shortText + `<a href="#" class="view-more reset-anchor text-primary">...read more</a><span class="rest-text" style="display: none;">${longText}</span>`);
+
+
+                $(document).on('click', '.view-more', function (e) {
+                    e.preventDefault();
+                    $(this).hide();
+                    $(this).parent(selector).find('.rest-text').show();
+                });
+            }
+        });
+
+    }
+
+    viewMoreBtn('.limited-text', 70);
+
+
+
+    let snippetModal = $('#snippetModal');
+    $(document).on('click', '.snippet-btn', function (e) {
+        let snippetEmbededSrc = $(this).attr('data-source');
+        snippetModal.find('iframe').attr('src', `https://jsfiddle.net/${snippetEmbededSrc}/embedded/result,js,html,css/dark/?username=MhmdHasan`);
+    });
+
+
+
+
+    // /* ===============================================================
+    // *   INITATE MASONRY GRID
+    // * =============================================================== */
+    // var $grid = $('.snippets-holder').masonry({
+    //     temSelector: '.grid-item',
+    //     columnWidth: '.grid-sizer',
+    //     percentPosition: true,
+    // });
+
+
+    let moreSnippetsBtn = $('#moreSnippetsBtn');
+    $.getJSON('js/snippets.json', function (data) {
+        let i = 0;
+        moreSnippetsBtn.on('click', function () {
+            snippet = `<div class="col-lg-4 col-md-6 mb-4"><div class="card card-animated border-0"><div class="card-body rounded shadow p-lg-5"><h3 class="h5 font-weight-normal">${data[i].title}</h3><p class="text-muted limited-text">${data[i].description}</p><button class="btn btn-primary btn-sm snippet-btn" data-source="${data[i].url}" data-toggle="modal" data-target="#snippetModal">View snippet</a></div></div></div>`;
+            snippet += `<div class="col-lg-4 col-md-6 mb-4"><div class="card card-animated border-0"><div class="card-body rounded shadow p-lg-5"><h3 class="h5 font-weight-normal">${data[i+1].title}</h3><p class="text-muted limited-text">${data[i+1].description}</p><button class="btn btn-primary btn-sm snippet-btn" data-source="${data[i+1].url}" data-toggle="modal" data-target="#snippetModal">View snippet</a></div></div></div>`;
+            snippet += `<div class="col-lg-4 col-md-6 mb-4"><div class="card card-animated border-0"><div class="card-body rounded shadow p-lg-5"><h3 class="h5 font-weight-normal">${data[i+2].title}</h3><p class="text-muted limited-text">${data[i+2].description}</p><button class="btn btn-primary btn-sm snippet-btn" data-source="${data[i+2].url}" data-toggle="modal" data-target="#snippetModal">View snippet</a></div></div></div>`;
+            $(snippet).insertBefore(moreSnippetsBtn.parent());
+            i = i + 3;
+
+            if (i > data.length - 1) {
+                moreSnippetsBtn.parent().hide();
+            }
+
+            viewMoreBtn('.limited-text', 70);
+        });
+
+
+    });
+
+
+
 });
 
 
@@ -149,22 +217,3 @@ if (textarea) {
       },0);
     }
 }
-
-
-let moreSnippetsBtn = $('#moreSnippetsBtn');
-$.getJSON('js/snippets.json', function (data) {
-    let i = 0;
-    moreSnippetsBtn.on('click', function () {
-        snippet = `<div class="col-lg-4 mb-4"><div class="card card-animated border-0"><div class="card-body rounded shadow p-lg-5"><h3 class="h4">${data[i].title}</h3><p class="text-muted">${data[i].description}</p><a class="btn btn-primary btn-sm" href="${data[i].url}">View snippet</a></div></div></div>`;
-        snippet += `<div class="col-lg-4 mb-4"><div class="card card-animated border-0"><div class="card-body rounded shadow p-lg-5"><h3 class="h4">${data[i+1].title}</h3><p class="text-muted">${data[i+1].description}</p><a class="btn btn-primary btn-sm" href="${data[i+1].url}">View snippet</a></div></div></div>`;
-        snippet += `<div class="col-lg-4 mb-4"><div class="card card-animated border-0"><div class="card-body rounded shadow p-lg-5"><h3 class="h4">${data[i+2].title}</h3><p class="text-muted">${data[i+2].description}</p><a class="btn btn-primary btn-sm" href="${data[i+2].url}">View snippet</a></div></div></div>`;
-        $(snippet).insertBefore(moreSnippetsBtn.parent());
-        i = i + 3;
-
-        if (i > data.length - 1) {
-            moreSnippetsBtn.parent().hide();
-        }
-    });
-
-
-});

@@ -1,32 +1,52 @@
 [
     {
-        "title" : "Snippet One",
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
-        "url": "#"
+        "title" : "jQuery add rows",
+        "description" : "Using jquery & Bootstrap 4, dynamically add and remove table rows.",
+        "url": "20j3mpdo/2"
     },
     {
-        "title" : "Snippet Two",
-        "description" : "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        "url": "#"
+        "title" : "Bootstrap sticky navbar",
+        "description" : "Create a sticky top navbar using Bootstrap 4 utility classes.",
+        "url": "empfvs0n/2"
     },
     {
-        "title" : "Snippet Three",
-        "description" : " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "url": "#"
+        "title" : "Bootstrap toggle switch",
+        "description" : "Create bootstrap toggle switches using Bootstrap custom form components.",
+        "url": "b8qo90cL/3"
     },
     {
-        "title" : "Snippet Four",
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
-        "url": "#"
+        "title" : "Bootstrap 4 tabs",
+        "description" : "Build a few custom styled tab variants using Bootstrap 4.",
+        "url": "b8cv5e3r/8"
     },
     {
-        "title" : "Snippet Five",
-        "description" : "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        "url": "#"
+        "title" : "Bootstrap 4 shopping cart",
+        "description" : "Build a fully structred shopping cart page using Bootstrap 4.",
+        "url": "gruwqds3/4"
     },
     {
-        "title" : "Snippet Six",
-        "description" : " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "url": "#"
+        "title" : "Bootstrap 4 list",
+        "description" : "Create an elegant product list using Bootstrap 4 list group",
+        "url": "h06qwy52/3"
+    },
+    {
+        "title" : "Bootstrap Datepicker",
+        "description" : "Create a nicely styled reservation form using Bootstrap 4.",
+        "url": "q7mw89j4/2"
+    },
+    {
+        "title" : "Bootstrap image upload",
+        "description" : "Build a simple image upload button using Bootstrap 4.",
+        "url": "8p6gsaoc/7"
+    },
+    {
+        "title" : "Bootstrap custom quote",
+        "description" : "Build a nicely styled quote in Bootstrap 4.",
+        "url": "b4dvm953/3"
+    },
+    {
+        "title" : "Bootstrap pricing table",
+        "description" : "Easily create a classy pricing table in Bootstrap 4.",
+        "url": "mzuqy1tn/6"
     }
 ]

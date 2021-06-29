@@ -928,3 +928,16 @@ code {
         }
     }
 }
+
+
+.modal-lg {
+    margin: 1rem auto;
+    @include media-breakpoint-up(lg) {
+        max-width: $modal-lg !important;
+    }
+    max-width: 100% !important;
+}
+
+.modal-backdrop.show {
+    opacity: 0.8 !important;
+}
