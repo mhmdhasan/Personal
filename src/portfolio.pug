@@ -111,7 +111,8 @@ block content
                                         .card-body.rounded.shadow.p-lg-5
                                             h3.h5.font-weight-normal #{val.title}
                                             p.text-muted.limited-text #{val.description}
-                                            button.btn.btn-primary.btn-sm.snippet-btn(type="button", data-source=`${val.url}` data-target="#snippetModal", data-toggle='modal') View snippet
+                                            button.btn.btn-primary.btn-sm.snippet-btn.d-none.d-sm-inline-block(type="button", data-source=`${val.url}` data-target="#snippetModal", data-toggle='modal') View snippet
+                                            a.btn.btn-primary.btn-sm.d-inline-block.d-sm-none(href=`https://jsfiddle.net/MhmdHasan/${val.url}`  target="_blank") View snippet
                             
                             .col-12.py-4.text-center
                                 button.btn.btn-outline-primary#moreSnippetsBtn(type="button") More snippets
@@ -121,12 +122,7 @@ block content
     .modal.fade#snippetModal
         .modal-dialog.modal-lg.border-0
             .modal-content.border-0.overflow-hidden.rounded
-                .d-block.d-sm-none.py-5.px-4.text-center
-                    i.fas.fa-mobile.fa-4x.text-primary.d-block.mb-4
-                    h2.h4 Mobile user!
-                    p.d-block.text-muted.mb-3 It seems that you're using mobile, it's recommended to view this snippet on large viewports, or see snippet from here. 
-                    a.btn.btn-outline-primary.modal-sm-btn(href="", target="_blank") View on jsFiddle
-                .snippet-modal.d-none.d-sm-block
+                .snippet-modal
                     .close-snippet.d-none.d-lg-block(data-dismiss="modal")
                     script(async, src="//jsfiddle.net/MhmdHasan/a4oh1uxd/2/embed/result,js,html,css/")
     
