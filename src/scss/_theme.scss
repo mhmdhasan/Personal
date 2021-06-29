@@ -931,11 +931,14 @@ code {
 
 
 .modal-lg {
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     @include media-breakpoint-up(lg) {
         max-width: $modal-lg !important;
     }
     max-width: 100% !important;
+    @include media-breakpoint-down(md) {
+        margin: 1.5rem;
+    }
 }
 
 .modal-backdrop.show {

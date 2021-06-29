@@ -161,6 +161,7 @@ $(function () {
     $(document).on('click', '.snippet-btn', function (e) {
         let snippetEmbededSrc = $(this).attr('data-source');
         snippetModal.find('iframe').attr('src', `https://jsfiddle.net/${snippetEmbededSrc}/embedded/result,js,html,css/dark/?username=MhmdHasan`);
+        snippetModal.find('.modal-sm-btn').attr('href', `https://jsfiddle.net/MhmdHasan/${snippetEmbededSrc}`);
     });
 
 
