@@ -392,3 +392,12 @@ $value in $theme-colors {
         }
     }
 }
+
+#snippetModal {
+    .modal-content, .snippet-modal {
+        border-radius: 0;
+        @include media-breakpoint-up(lg) {
+            border-radius: 1rem !important;
+        }
+    }
+}
