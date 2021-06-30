@@ -188,8 +188,9 @@ $(function () {
             $(snippet).insertBefore(moreSnippetsBtn.parent());
             i = i + 3;
 
-            if (i > data.length - 1) {
+            if (i > data.length - 2) {
                 moreSnippetsBtn.parent().hide();
+                console.log('no more snippets')
             }
 
             viewMoreBtn('.limited-text', 70);
